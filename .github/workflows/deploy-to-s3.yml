@@ -20,6 +20,12 @@ jobs:
     - name: Build Frontend
       run: npm run build
 
+    - name: Upload Build Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-artifacts
+        path: ./dist
+
   call-deployment:
     name: Trigger S3 Deployment
     needs: build-and-deploy
