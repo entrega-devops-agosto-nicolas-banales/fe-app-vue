@@ -23,7 +23,7 @@ jobs:
   call-deployment:
     name: Trigger S3 Deployment
     needs: build-and-deploy
-    uses: entrega-devops-agosto-nicolas-banales/devops-configuration/.github/workflows/deploy-to-s3.yml@main
+    uses: entrega-devops-agosto-nicolas-banales/devops-configuration/.github/workflows/deploy-to-s3-wf.yml@main
     with:
       bucket-name: 'fe-app-s3'
       environment: 'prod'
